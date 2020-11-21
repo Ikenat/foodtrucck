@@ -83,9 +83,6 @@ if (pokebowl != null && wrap != null && ramen != null && dessert != null) {
 }
 
 
-function getValue(valeur)  {
-    valeur = 2;
-}
 
 
 
@@ -260,8 +257,8 @@ function AffichagePanier() {
                     </div>
                 </div>
                 <div class="modif">
-                    <p class="plus">+</p>
-                    <p class="suppr">X</p>
+                    <p class="plus" onclick="addQuantity()">+</p>
+                    <p class="suppr" onclick="supprProduct()">X</p>
                 </div>
             </div>
             `
@@ -273,6 +270,10 @@ function AffichagePanier() {
         `;
         totalCostdiv.innerHTML += ` <p>Total: ${totalCost} €</p> `;
     }
+}
+
+function addQuantity() {
+    
 }
 
 function suppr() {

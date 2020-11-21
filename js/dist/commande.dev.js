@@ -65,10 +65,6 @@ if (pokebowl != null && wrap != null && ramen != null && dessert != null) {
     });
     dessert.innerHTML += '<div class="product"><div class="information_wrapper"><div class="img"><img src="' + element.img + '" alt= ui></div><div class="text"><h2>' + element.produit + '</h2><p>' + ingredient + '</p></div></div><div class="panier"><p>' + element.prix + ' € </p><button type="button" value="5" >Ajoutez au panier</button></div></div>';
   });
-}
-
-function getValue(valeur) {
-  valeur = 2;
 } //ajoute pour chaque bouton un onclick
 
 
@@ -233,12 +229,14 @@ function AffichagePanier() {
         ingredient += '<p>' + element + '</p>';
       });
       totalCost += element.prix * element.quantite;
-      PanierContainer.innerHTML += "\n            <div class=\"product\">\n                <div class=\"information_wrapper\">\n                    <div class=\"img\">\n                        <img src=\"  ".concat(element.img, "  \" alt= ui>\n                    </div>\n                    <div class=\"text\">\n                        <div class=\"product-info\">\n                            <span> ").concat(element.quantite, " </span>\n                            <h2> ").concat(element.produit, "  </h2>\n                        </div>\n                        <p> ").concat(ingredient, " </p>\n                    </div>\n                </div>\n                <div class=\"modif\">\n                    <p class=\"plus\">+</p>\n                    <p class=\"suppr\">X</p>\n                </div>\n            </div>\n            ");
+      PanierContainer.innerHTML += "\n            <div class=\"product\">\n                <div class=\"information_wrapper\">\n                    <div class=\"img\">\n                        <img src=\"  ".concat(element.img, "  \" alt= ui>\n                    </div>\n                    <div class=\"text\">\n                        <div class=\"product-info\">\n                            <span> ").concat(element.quantite, " </span>\n                            <h2> ").concat(element.produit, "  </h2>\n                        </div>\n                        <p> ").concat(ingredient, " </p>\n                    </div>\n                </div>\n                <div class=\"modif\">\n                    <p class=\"plus\" onclick=\"addQuantity()\">+</p>\n                    <p class=\"suppr\" onclick=\"supprProduct()\">X</p>\n                </div>\n            </div>\n            ");
     });
     PanierContainer.innerHTML += "\n        <div class=\"totalprice bottom\">\n            <p>Total: ".concat(totalCost, " \u20AC</p>\n        </div>\n        ");
     totalCostdiv.innerHTML += " <p>Total: ".concat(totalCost, " \u20AC</p> ");
   }
 }
+
+function addQuantity() {}
 
 function suppr() {
   localStorage.clear();
