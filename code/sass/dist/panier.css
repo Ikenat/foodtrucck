@@ -1,0 +1,124 @@
+.commande-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.commande-info div {
+  margin: 1%;
+  height: 3em;
+  width: 8em;
+  text-align: center;
+  border-radius: 15px;
+  color: white;
+}
+.commande-info div:first-child {
+  background-color: #a6cacd;
+  border: 2px solid #8ac1c4;
+}
+.commande-info div:nth-child(2n) {
+  background-color: #cfbeb4;
+  border: 2px solid #c09f96;
+}
+.commande-info div:nth-child(3n) {
+  background-color: #97cb8e;
+  border: 2px solid #54aa43;
+}
+.commande-info div button {
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.panier-bg .product-container {
+  margin: 0 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid darkgray;
+  border-radius: 30px;
+}
+.panier-bg .product-container .vide {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panier-bg .product-container .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin: 0 2%;
+}
+.panier-bg .product-container .product:first-child {
+  padding-top: 1%;
+}
+.panier-bg .product-container .product:not(:first-child) {
+  padding: 2% 0;
+}
+.panier-bg .product-container .product .information_wrapper {
+  display: flex;
+  align-items: center;
+}
+.panier-bg .product-container .product .information_wrapper .text {
+  margin-left: 30px;
+}
+.panier-bg .product-container .product .information_wrapper .text .product-info {
+  display: flex;
+  align-items: center;
+}
+.panier-bg .product-container .product .information_wrapper .text .product-info span {
+  border: 1px solid lightblue;
+}
+.panier-bg .product-container .product .information_wrapper .text .product-info h2 {
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px white solid;
+}
+.panier-bg .product-container .product .information_wrapper .text p {
+  margin: 0.1em;
+  padding: 0;
+}
+.panier-bg .product-container .product .information_wrapper .img img {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+}
+.panier-bg .product-container .product .modif {
+  display: flex;
+  align-items: center;
+}
+.panier-bg .product-container .product .modif p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  margin: 0 20px;
+  background-color: #d5c2bb;
+  border-radius: 50px;
+  border: 1px solid darkgrey;
+}
+.panier-bg .product-container .product .modif p.plus {
+  font-size: 1.9em;
+}
+.panier-bg .product-container .product .modif p.suppr {
+  color: red;
+}
+.panier-bg .product-container .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.panier-bg .product-container .bottom p {
+  color: white;
+  margin: 1%;
+  height: 3em;
+  width: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfbeb4;
+  border: 2px solid #c09f96;
+}

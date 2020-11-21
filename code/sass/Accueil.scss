@@ -1,0 +1,227 @@
+@mixin selectSlide {
+    list-style: none;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-left: 3px solid #6592b3;
+        border-bottom: 3px solid #6592b3;
+    }
+}
+.slider_control_next {
+    right: 1%;
+    .next {
+        @include selectSlide;
+        &:after {
+            transform: rotate(225deg); 
+        }
+    }
+}
+.slider_control_previous {
+    left: 1%;
+    .prev {
+        @include selectSlide;
+        &:after {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    .image_slider{
+        position: absolute;
+        width: 100%;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+            opacity: 0;
+            transition: 0.5s;
+            background-position: center;
+            &.show{
+                opacity: 1;
+            }
+        }
+    }
+    .text_slider {
+        position: absolute;
+        background-color: rgba($color: #000000, $alpha: .4);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title {
+            margin: 0;
+            position: absolute;
+            top: 1%;
+            color: white;
+            font-size: 80px;
+        }
+        div {
+            display: none;
+            padding: 0;
+            margin: 0;
+            transition: 0.5s;
+            &.show {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+            }
+            h2 {
+                color: white;
+                font-size: 60px;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                padding: 10px 30px;
+                border: #6592b3 2px solid;
+                border-radius: 10px;
+            }
+        }
+    }
+    .slider_control_next, .slider_control_previous{
+        position: absolute;
+        top: 45%;
+        width: 80px;
+    }
+}
+
+.content_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #2b2b2a;
+    .ui {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .menu {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .menu_wrapper {
+                img {
+                    height: 1520px; 
+                    margin-bottom: 10px;
+                }
+            } 
+        }
+        .facebook {
+            width: 95%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img {
+                height: 80px;
+                margin-left: 20px;
+            }
+            p {
+                color: white;
+                font-size: 25px;
+            }
+        }
+    }
+    .info_wrapper {
+        background-image: url("../../images/van-cta-camping.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 50%;
+        .bg_white {
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: white, $alpha: 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .content {
+                margin: 10px 0;
+                width: 750px;
+                height: 360px;
+                border-radius: 15px;
+                border: 2px black solid;
+                background-color: red;
+                &.avis_slider {
+                    background: transparent;
+                    position: relative;
+                    .avis {
+                        display: none;
+                        &.active {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .commentaire {
+                            width: 80%;
+                            text-align: center;
+                            img:not(:last-child) {
+                                margin-right: 5px;
+                            }
+                        }
+                        .compte {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            img {
+                                height: 100px;
+                                border-radius: 150px;
+                            }
+                        }
+                    }
+                    .slider_control_next, .slider_control_previous{
+                        position: absolute;
+                        bottom: 10%;
+                        width: 80px;
+                    }
+                }
+                &.Actu {
+                    background-image: url("../../images/actu\ rennes.jpeg");
+                    background-size: cover;
+                }
+                &.meteo {
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+        .instagram {
+            width: 95%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                height: 80px;
+                margin-right: 20px;
+            }
+            p {
+                color: white;
+                font-size: 25px;
+            }
+        }
+    }
+}
