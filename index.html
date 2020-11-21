@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/dist/main.css">
+    <title>Ola WIKIWIKI</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html"><img class="logo" src="./images/Logo.png" alt="logo olawikiwiki"></a>
+        <div class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="commande.html">Menu</a>
+            <a href="Story.html">Histoire</a>
+        </div>
+        <div class="i">
+            <a href="profil.html"><img src="./images/icon-contact.png" alt="logo de profil"></a>
+            <a href="panier.html"><img src="./images/icon-shop.svg" alt="logo de caddie"></a><span class="cartitem">0</span>
+        </div>
+    </div>
+    <section class="slider">
+        <div class="image_slider">
+            <img class="show" src="./images/poke_bowl.jpg" alt="poke_bowl">
+            <img src="./images/ramen.jpeg" alt="ramen">
+            <img src="./images/wrap.jpg" alt="wrap">
+        </div>
+        <div class="text_slider">
+            <h1 class="title">Ola WIKIWIKI</h1>
+            <div class="show">
+                <h2>Poké Bowl</h2>
+                <a href="#">Voir Plus</a>
+            </div>
+            <div>
+                <h2>Ramen</h2>
+                <a href="#">Voir Plus</a>
+            </div>
+            <div>
+                <h2>Wrap</h2>
+                <a href="#">Voir Plus</a>
+            </div>
+        </div>
+        <div class="slider_control_previous">
+            <span class="prev" onclick="previousSlider()"></span>
+        </div>
+        <div class="slider_control_next">
+            <span class="next" onclick="nextSlider()"></span>
+        </div>
+    </section>
+    <section class="content_wrapper">
+        <div class="ui">
+            <div class="menu">
+                <div class="menu_wrapper">
+                    <img src="./images/Menu.png" alt="menu du foodtruck">
+                </div>
+            </div>
+            <div class="facebook">
+                <p>facebook</p>
+                <a href="#"><img src="./images/facebook.png" alt="facebook"></a>
+            </div>
+        </div>
+        <div class="info_wrapper">
+            <div class="bg_white">
+                <div class="content avis_slider">
+                    <div class="avis active">
+                        <div class="commentaire">
+                            <p>"c'était bon mais sans plus"</p>
+                            <img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation">
+                        </div>
+                        <div class="compte">
+                            <img src="images/shouks.jpg" alt="shouks">
+                            <p>Shouks</p>
+                        </div>
+                    </div>
+                    <div class="avis">
+                        <div class="commentaire">
+                            <p>"ui"</p>
+                            <img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-plein.png" alt=" notation"><img src="images/bowl-icon-half.png" alt=" notation">
+                        </div>
+                        <div class="compte">
+                            <img src="images/shouks.jpg" alt="shouks">
+                            <p>Shouks</p>
+                        </div>
+                    </div>
+                    <div class="slider_control_previous">
+                        <span class="prev" onclick="previousAvis()"></span>
+                    </div>
+                    <div class="slider_control_next">
+                        <span class="next" onclick="nextAvis()"></span>
+                    </div>
+                </div>
+                <div class="content Actu">
+                </div>
+                <div class="content meteo">
+                    <img src="./images/meteo.JPG" alt="c'est la météo de guilli">
+                </div>
+                <div class="content location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1332.456782373517!2d-1.704238299364911!3d48.09261009816326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA1JzMzLjQiTiAxwrA0MicxMi45Ilc!5e0!3m2!1sfr!2sfr!4v1604266304357!5m2!1sfr!2sfr" width="750" height="360" frameborder="0" style="border-radius: 10px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="instagram">
+                    <a href="#"><img src="./images/insta.png" alt="insta"></a>
+                    <p>Instagram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer_wrapper">
+                <div class="footer_title">
+                    <h2>Pour nous contacter :</h2>
+                </div>
+                <div class="contact">
+                    <div class="mail">
+                        <img src="./images/pictograms-nps-post-office.png" alt="logo mail">
+                        <p>olawikiwiki@hotmail.fr</p>
+                    </div>
+                    <div class="tel">
+                        <p>02 99 45 60 70</p>
+                        <img src="./images/tel blanc.png" alt="logo tel">
+                    </div>
+                </div>
+            </div>
+            <div class="CopyRight">
+                Copyright
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/commande.js"></script>
+    <script>
+        const slider_img = document.querySelector('.image_slider');
+        const slider_text = document.querySelector('.text_slider');
+        //slides est un tableau car plusieurs img
+        const slides_img = slider_img.getElementsByTagName('img');
+        const slides_text = slider_text.getElementsByTagName('div');
+        let i = 0;
+
+        const slider_avis = document.querySelector('.avis_slider');
+        console.log(slider_avis);
+        const slides_avis = slider_avis.getElementsByClassName('avis');
+        console.log(slides_avis.length);
+        let j = 0;
+
+        //fonction pour faire apparaitre le prochain slide, 
+        function nextSlider() {
+            //tout d'abord on enlève la class show au premier slide
+            slides_img[i].classList.remove('show');
+            slides_text[i].classList.remove('show');
+            //on incrémente le i pour pouvoir selectionner le prochain slide ( % slides.lenght sert à revenir à 0 quand on i = à la longueur du tableau)
+            i = (i + 1) % slides_img.length;
+            //on ajoute la class show au prochain slide
+            slides_img[i].classList.add('show');
+            slides_text[i].classList.add('show');
+        }
+
+        //même fonction que nextSLider sauf que c'est pour le slider précedent 
+        function previousSlider() {
+            slides_img[i].classList.remove('show');
+            slides_text[i].classList.remove('show');
+            // le calcul est différent car on veut que quand on fasse -1 cela ne fasse pas de négatif,
+            i = (i - 1 + slides_img.length) % slides_img.length;
+            //on ajoute la class show a la slide précedente
+            slides_img[i].classList.add('show');
+            slides_text[i].classList.add('show');
+        }
+
+
+        function nextAvis() {
+            slides_avis[j].classList.remove('active');
+            j = (j + 1) % slides_avis.length;
+            slides_avis[j].classList.add('active');
+        }
+        function previousAvis() {
+            slides_avis[j].classList.remove('active');
+            j = (j - 1 + slides_avis.length) % slides_avis.length;
+            slides_avis[j].classList.add('active');
+        }
+
+    </script>
+</body>
+</html>

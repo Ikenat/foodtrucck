@@ -1,0 +1,88 @@
+.commande_content {
+  background-color: #414242;
+  margin: 0;
+  padding: 0;
+}
+.commande_content .nav-menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1%;
+  margin: 0;
+}
+.commande_content .nav-menu ul li {
+  width: 8em;
+  border: black 1px solid;
+  border-radius: 10%;
+  text-align: center;
+  background-size: fill;
+}
+.commande_content .nav-menu ul li.formules {
+  background-color: #a6cacd;
+}
+.commande_content .nav-menu ul li.pokebowl {
+  background-color: #cfbeb4;
+}
+.commande_content .nav-menu ul li.wrap {
+  background-color: #97cb8e;
+}
+.commande_content .nav-menu ul li.ramen {
+  background-color: #a6cacd;
+}
+.commande_content .nav-menu ul li.dessert {
+  background-color: #cfbeb4;
+}
+.commande_content .nav-menu ul li.boissons {
+  background-color: #97cb8e;
+}
+.commande_content .nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+.commande_content .formule_wrapper {
+  margin: 0 1%;
+}
+.commande_content .formule_wrapper h2 {
+  color: white;
+  border-bottom: 2px solid white;
+}
+.commande_content .formule_wrapper .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.commande_content .formule_wrapper .product:not(:first-child) {
+  padding: 2% 0;
+}
+.commande_content .formule_wrapper .product .information_wrapper {
+  display: flex;
+}
+.commande_content .formule_wrapper .product .information_wrapper .text {
+  margin-left: 30px;
+}
+.commande_content .formule_wrapper .product .information_wrapper .text h3 {
+  margin: 0;
+  padding: 0;
+}
+.commande_content .formule_wrapper .product .information_wrapper .text p {
+  margin: 0.1em;
+  padding: 0;
+}
+.commande_content .formule_wrapper .product .information_wrapper .img img {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+}
+.commande_content .formule_wrapper .product .panier {
+  display: flex;
+  justify-content: space-around;
+}
+.commande_content .formule_wrapper .product .panier button {
+  color: white;
+  margin-left: 30px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 15px;
+}
